@@ -349,3 +349,6 @@ Pour les utilisateur·ices de Windows, installer [WSL2](https://learn.microsoft.
  - [Philosophie d'Unix](https://fr.wikipedia.org/wiki/Philosophie_d%27Unix), description de la philosophie Unix;
  - [Pipeline (Unix)](https://en.wikipedia.org/wiki/Pipeline_(Unix)), description du pipe;
  - [Pipe: How the System Call That Ties Unix Together Came About](https://thenewstack.io/pipe-how-the-system-call-that-ties-unix-together-came-about/), présente l'histoire de la création du pipe.
+
+
+> Ce sujet est un fork [du dépôt de mon collègue Fabien Rozar](https://github.com/frozar/git-evaluation)
