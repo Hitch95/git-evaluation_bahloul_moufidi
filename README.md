@@ -51,7 +51,7 @@ Ce projet a pour but d'évaluer votre capacité à utiliser git et à manipuler 
 
 > Merci de **lire attentivement** les consignes !
 
-**Déposer** votre travail **sur un dépôt git public** (GitHub, Gitlab, etc.) et fournir **le lien du dépôt**. Le dépôt contiendra le code source de l'API et un fichier `README` donnant les instructions pour installer et lancer le projet.
+**Déposer** votre travail **sur un dépôt git public** (GitHub, Gitlab, etc.) et fournir **le lien du dépôt**. Le dépôt git contiendra les sources et un fichier `README` donnant les instructions pour installer et lancer le projet.
 
 **Pour chaque groupe**, envoyer **un seul e-mail** à l’adresse suivante : <a href="mailto:pschuhmacher@myges.fr?subject=git-evaluation_groupe-<numéro>">pschuhmacher@myges.fr</a>, **ayant le sujet suivant** : 
 
