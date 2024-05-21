@@ -1,31 +1,41 @@
-# Git Évaluation - Projet *Minitrice*
+# Git - Évaluation : - Projet *Minitrice* versionné avec Git
 
-Module Git
+<hr>
+
+Module Git (14h)
+
+Date de dernière modification : 05/24
+
+ESGI (Eductive), 3ème année
+
+Auteur: Paul Schuhmacher
 
 Version: 1
 
 <hr>
 
-Ce projet consiste à créer un programme capable de réaliser les 4 opérations arithmétiques élémentaires (`+`, `-`, `*` et `/`) entre deux nombres positifs. 
+Ce projet consiste à créer un programme capable de réaliser les 4 opérations arithmétiques élémentaires (`+`, `-`, `*` et `/`) entre deux nombres positifs. L'historique de développement du projet sera suivi avec git.
 
-- [Git Évaluation - Projet *Minitrice*](#git-évaluation---projet-minitrice)
+
+- [Git - Évaluation : - Projet *Minitrice* versionné avec Git](#git---évaluation----projet-minitrice-versionné-avec-git)
   - [Objectifs](#objectifs)
   - [Comment rendre votre travail](#comment-rendre-votre-travail)
-  - [Date](#date)
-  - [Sujet](#sujet)
+  - [Échéance](#échéance)
+  - [Bien démarrer](#bien-démarrer)
   - [À rendre](#à-rendre)
   - [Notation](#notation)
+  - [Questions](#questions)
   - [Spécifications du projet](#spécifications-du-projet)
-    - [Scénario 1 : Utilisation interactive](#scénario-1--utilisation-interactive)
-    - [Utilisation en lisant STDIN](#utilisation-en-lisant-stdin)
-    - [Scénario 2 : STDIN : utilisation de `echo`](#scénario-2--stdin--utilisation-de-echo)
-    - [Scénario 3 : STDIN : utilisation de `cat`](#scénario-3--stdin--utilisation-de-cat)
-    - [Gestion d'erreurs](#gestion-derreurs)
-      - [Scénario 4 : Erreur de syntaxe](#scénario-4--erreur-de-syntaxe)
-      - [Scénario 5 : Division par zéro](#scénario-5--division-par-zéro)
-    - [Générateur d'expressions](#générateur-dexpressions)
-    - [Formatage](#formatage)
-    - [Visualisation avec gource](#visualisation-avec-gource)
+    - [Spécification 1 - Utilisation interactive](#spécification-1---utilisation-interactive)
+    - [Spécification 2 - STDIN : utilisation de `echo`](#spécification-2---stdin--utilisation-de-echo)
+    - [Spécification 3 - STDIN : utilisation de `cat`](#spécification-3---stdin--utilisation-de-cat)
+    - [Spécification 4 - Gestion d'erreurs](#spécification-4---gestion-derreurs)
+      - [Erreur de syntaxe](#erreur-de-syntaxe)
+      - [Division par zéro](#division-par-zéro)
+    - [Spécification 5 : Générateur d'expressions](#spécification-5--générateur-dexpressions)
+    - [Spécification 6 : Formatage](#spécification-6--formatage)
+    - [Branching model à utiliser](#branching-model-à-utiliser)
+    - [Visualisation avec gource (optionnel)](#visualisation-avec-gource-optionnel)
   - [Conseils](#conseils)
     - [Sur Windows](#sur-windows)
   - [Liens utiles](#liens-utiles)
@@ -33,9 +43,9 @@ Ce projet consiste à créer un programme capable de réaliser les 4 opérations
 
 ## Objectifs
 
-Ce projet sert de support pour l'évaluation du module Git et doit être réalisé par groupe de 2 ou 3.
+Ce projet sert de support pour l'évaluation du module Git et doit être réalisé **seul ou à deux**.
 
-Le groupe démontrera sa capacité à manipuler des branches git et à réaliser des *Pull Request*. Ce travail est **collectif**, on attend que chaque membre du groupe contribue de manière *égale* au dépôt. Aussi, le nombre de commits par personne devrait être sensiblement le même.
+Ce projet a pour but d'évaluer votre capacité à utiliser git et à manipuler des branches git [en suivant un git worfklow précis](#branching-model-à-utiliser). Dans le cas où le travail est réalisé à deux, on attend que chaque membre du groupe contribue de manière *égale* au dépôt. Aussi, le nombre de commits par personne devrait être *sensiblement* le même.
 
 ## Comment rendre votre travail
 
@@ -60,19 +70,19 @@ Dans l'e-mail, indiquer :
 
 > Vous êtes encouragé·e à mettre vos collègues en copie du mail de rendu.
 
-## Date
+## Échéance
 
-Vous devez rendre le projet avant le ...
+Vous devez rendre le projet avant le **11/06/24 23h59 UTC+2**.
 
+## Bien démarrer
 
-
-## Sujet
-
-Le sujet du projet est accessible sur ce dépôt. Il contient :
+Le sujet du projet est [accessible sur ce dépôt](https://github.com/paul-schuhm/git-projet-minitrice). Il contient :
 
 - Le sujet au format Markdown;
 - Un dossier `test` comprenant des données pour tester votre programme;
-- Un fichier good-expressions
+- Un fichier `good-expression.txt` comprenant des expressions à évaluer.
+
+> Cloner ce dépôt pour vous en servir comme point de départ.
 
 ## À rendre
 
@@ -83,11 +93,12 @@ Le sujet du projet est accessible sur ce dépôt. Il contient :
 Votre dépôt doit contenir *a minima* :
 
 - Un fichier `README.md` avec les sections suivantes :
-  - **Table des matières** (vous pouvez la générer automatiquement), pour naviguer facilement dans le document
+  - **Table des matières** (vous pouvez la générer automatiquement), pour naviguer facilement dans le document;
   - **Installation** : instructions pour installer et lancer votre programme. Si des logiciels tiers (ex: compilateur) doivent être installés, les procédures d'installation doivent être décrites ici. Il en va de même pour les bibliothèques;
   - **Exécution** : un exemple d'utilisation de votre programme, avec la sortie attendue, comme ce qui fait dans ce document;
-  - **Publication** : Le lien Youtube de votre vidéo Gource associée à l'activité de votre dépôt 
-  - **Remarques** : si vous voulez faire des remarques sur votre travail, difficultés rencontrées
+  - **Remarques** : si vous voulez faire des remarques sur votre travail, difficultés rencontrées;
+  - **Publication (optionnel)** : Le lien Youtube de votre vidéo Gource associée à l'activité de votre dépôt;
+  - **Réponses aux questions** : Les réponses aux questions adressées sur git;
   - **Références/Liens utiles** : la liste des références (sites web, cours, livre, article, billet de blog, etc.)qui vous a été utile pour réaliser ce projet.
 - Les exécutables `minitrice` et `generator` à la racine du dépôt. Dans le cas où ces programmes sont générés, à la fin de leur génération, ces programmes doivent être présents à la racine de votre dépôt.
 - Un dossier `results` à la racine de votre dépôt. Vous y stockerez les résultats de votre programme `minitrice` sur les fichiers contenu dans le dossier `test`. Les noms de fichiers contenant les résultats correspondront au nom de fichier d'origine suffixé par `-result`, par exemple `00-addition-result.txt`.
@@ -105,21 +116,44 @@ exemple-depot/
     └── 00-addition.txt
 ~~~
 
+> Pensez à bien **publier vos branches locales sur le dépôt** !
+
 ## Notation
 
-Le projet est noté sur **20**, **coefficient 2**. Voici le barème :
+Le projet est ramené sur une note sur **20**. Voici le barème détaillé :
 
- - Présence d'un `README.md` **bien formé** (Markdown correcte, lisible, sans fautes ou coquilles), **conforme à la consigne**  (Présence des sections demandées): **2 points**;
- - Respect des noms de programmes et fichier pour les travaux réalisés : **2 points**;
- - Exécution correcte de votre programme sur les fichiers du répertoire `test` :  **2 points**;
- - Présence du répertoire `results` contenant les différents fichiers de résultats avec le contenu attendu : **1 point**;
- - Exécution correcte de votre programme sur les scénarios dans ce document : **2 points**;
- - La création du programme `generator` et son exécution correcte : **1 point**;
- - Exécution correcte de votre programme sur un grand fichier (environ 10000 lignes) qui n'est pas fournis : **1 point**;
- - Chaque message commit doit être court (< 70 caractères) et décrire correctement le travail réalisé par le commit. Si la description doit être plus longue, utiliser le corps du message de commit : **3 points**;
- - Pour chaque progression sur votre projet, l'utilisation des *Pull Request* sur Github avec des descriptions explicites du contenu de la *Pull Request* : **5 points**;
- - Publication de la vidéo générée par la commande [gource](https://gource.io/) correspondante à votre activité sur ce dépôt : **1 point**.
+- Réponses aux questions sur git (validation d'acquis) : **4 points**
+- Présence d'un `README.md` **bien formé** (Markdown correcte, lisible, sans fautes ou coquilles), **conforme à la consigne**  (sections demandées): **2 points**;
+- Respect des noms de programmes et fichier pour les travaux réalisés : **2 points**;
+- Exécution correcte de votre programme sur les fichiers du répertoire `test` :  **2 points**;
+- Présence du répertoire `results` contenant les différents fichiers de résultats avec le contenu attendu : **1 point**;
+- Exécution correcte de votre programme sur les scénarios dans ce document : **2 points**;
+- La création du programme `generator` et son exécution correcte : **1 point**;
+- Le suivi du projet respecte le workflow *GitFlow* (branches, rôle de chaque branche, etc.) : **5 points**;
+- Chaque message commit doit être concis (< 70 caractères) et décrire correctement le travail réalisé par le commit. Si la description doit être plus longue, le corps du message de commit est utilisé : **3 points**;
+- L'historique de commits est nettoyé (avec `git rebase` interactif), les commits sont *atomiques* : **2 points**
+- Pour chaque progression sur votre projet (*merge* dans `main`), le projet est dans un état  **fonctionnel** (même s'il est incomplet) : **2 points**;
+- **Bonus :** Publication de la vidéo générée par la commande [gource](https://gource.io/) correspondante à votre activité sur ce dépôt : **1 point**.
 
+## Questions
+
+Veuillez répondre à ces questions sur git de manière *succincte*, **sans justifier sauf si explicitement demandé** :
+
+1. Git est un gestionnaire de version *décentralisé*. Qu'est ce que cela signifie ? Quel est le rôle joué par un dépôt central sur GitHub ou GitLab dans ce cas ? **Justifier**.
+2. À quoi sert la commande `git fetch -p` ?
+3. Dans quelles conditions est-ce qu'un conflit apparaît avec git ?
+4. Lorsque vous résolvez un conflit, quelle est la *dernière* commande git que vous devez executer ?
+5. Depuis GitHub, après avoir accepté une contribution sur la branche principale, que devez vous faire pour mettre à jour votre branche principale *localement* ?
+6. Quelle est la différence entre les commandes `git reset --soft` et `git reset --hard` ? Donner **un** cas d'usage pratique et courant pour chacune de ces commandes.
+7. Voici le *log* d'un dépôt git :
+~~~bash
+* 9f64652 - (HEAD -> main) 3 (il y a 2 secondes) <p. schuhmacher>
+* 68cd016 - 2 (il y a 18 secondes) <p. schuhmacher>
+* d47267f - 1 (il y a 43 secondes) <p. schuhmacher>
+~~~
+Quelle est la (ou les) commande à executer pour transformer les commits `9f64652` et `68cd016` en *un seul commit* avec un nouveau message ?
+
+8. Pourquoi est-il déconseillé de *rebase* une branche *publique* (branche sur laquelle travaille aussi d'autres personnes) ?
 
 ## Spécifications du projet
 
@@ -129,7 +163,7 @@ Le programme prend en entrée une chaîne de caractère qui contient 2 nombres p
 
 L'exécutable représentant le programme sera désigné par `minitrice` dans la suite de ce document. Il doit être utilisable de façon interactive ou en lisant l'entrée standard `STDIN`.
 
-### Scénario 1 : Utilisation interactive
+### Spécification 1 - Utilisation interactive
 
 Un exemple d'utilisation :
 
@@ -162,7 +196,7 @@ Ce scénario décrit un exemple d'utilisation du programme à réaliser.
 
 **Remarque :** Toutes les écritures du programme `minitrice` se font sur la sortie standard `STDOUT`.
 
-### Utilisation en lisant STDIN
+### Spécification 2 - STDIN : utilisation de `echo`
 
 Dans le but d'automatiser l'utilisation du programme `minitrice`, il doit pouvoir lire sur l'entrée standard `STDIN`. Dans [la tradition d'Unix](https://fr.wikipedia.org/wiki/Philosophie_d%27Unix), tout programme devrait présenter une interface *texte*, l'interface *universelle*. Cette interface permet au programme de recevoir des données en entrée depuis la sortie d'un autre programme sous forme de chaîne de caractères. Ainsi, le programme peut être *composé* avec d'autres programmes pour en fabriquer de nouveaux. Pour composer deux programmes, il faut utiliser [un pipe (ou tube)](https://en.wikipedia.org/wiki/Pipeline_(Unix)), représenté par le caractère `|`. Par exemple :
 
@@ -173,8 +207,6 @@ programme1 | programme2 | programme3
 `programme3` lit son entrée depuis la sortie de `programme2`, et `programme2` lit son entrée depuis la sortie de `programme1`. On peut dire que `programme1 | programme2 | programme3 ` est un *nouveau* programme, *composé* à partir de 3 autres programmes.
 
 Il y a généralement 2 utilitaires (programmes) pour envoyer des données à travers un pipe : `echo` et `cat`.
-
-### Scénario 2 : STDIN : utilisation de `echo`
 
 Un exemple d'utilisation :
 
@@ -195,7 +227,8 @@ Un exemple d'utilisation :
 
 Ce scénario décrit un exemple d'utilisation du programme à réaliser. On peut noter qu'il est plus court que le scénario interactif et qu'il n'y a pas de message à la sortie du programme.
 
-### Scénario 3 : STDIN : utilisation de `cat`
+
+### Spécification 3 - STDIN : utilisation de `cat`
 
 Dans ce dépôt, vous trouverez le fichier `good-expression.txt` qui contient 10 expressions calculables avec les 4 opérations à gérer. En utilisant ce fichier :
 
@@ -228,11 +261,11 @@ De la ligne `2` à `12`, le programme `minitrice` écrit le résultat des calcul
 
 Ce scénario décrit un exemple d'utilisation du programme à réaliser. On peut noter qu'avec la capacité de lecture sur le pipe, il possible au programme `minitrice` de traiter un grand nombre de données.
 
-### Gestion d'erreurs
+### Spécification 4 - Gestion d'erreurs
 
 La gestion d'erreurs fait partie intégrante du travail du développeur·se. Si les cas limites ne sont pas traités, le programme est généralement inutilisable. La gestion des erreurs est identique que le programme `minitrice` soit utilisé en mode interactif ou en mode lecture depuis `STDIN`.
 
-#### Scénario 4 : Erreur de syntaxe
+#### Erreur de syntaxe
 
 Si la ligne de calcul comporte une erreur de syntaxe, voici le comportement du programme `minitrice` :
 
@@ -253,7 +286,7 @@ Si la ligne de calcul comporte une erreur de syntaxe, voici le comportement du p
 
 On peut noter que le message d'erreur rappelle la ligne de calcul qui a provoqué l'erreur. On peut aussi voir que le code de sortie est *différent* de `0`, ce qui indique que le programme ne s'est pas exécuté correctement.
 
-#### Scénario 5 : Division par zéro
+#### Division par zéro
 
 La division par zéro est un grand classique des erreurs à traiter dans le cadre de calcul. Voici le comportement du programme `minitrice` dans ce cas de figure :
 
@@ -274,7 +307,7 @@ La division par zéro est un grand classique des erreurs à traiter dans le cadr
 
 On peut noter que le message d'erreur ne donne pas d'information sur le calcul qui a provoqué ce message (ce qui est moins pratique pour débugguer). On peut aussi voir que le code de sortie est *différent* de 0, ce qui indique que le programme ne s'est pas exécuté correctement.
 
-### Générateur d'expressions
+### Spécification 5 : Générateur d'expressions
 
 Le programme `minitrice` ayant la capacité de lire des entrées depuis un pipe, `|`, il est maintenant possible de le relier à la sortie d'un autre programme : `generator`.
 
@@ -303,13 +336,17 @@ Le programme `generator` peut *être composé* avec le programme `minitrice` à 
 4. $
 ```
 
-### Formatage
+### Spécification 6 : Formatage
 
 - Les nombres que le programme `minitrice` doit supporter sont des nombres positifs de taille raisonnable : pas d'overflow ou d'erreur de calcul dû la taille des nombres manipulée. Donc pas de piège ici.
 - Les espaces à gauche et à droite d'une ligne de calcul ne génèrent pas d'erreurs.
 - Pour l'affichage du résultat de calcul, il doit être **arrondi à 2 chiffres après la virgule** lorsque sa partie décimale est grande.
 
-### Visualisation avec gource
+### Branching model à utiliser
+
+Pour versionner ce projet, **vous devez utiliser** le git workflow (ou *branching model*) [GitFlow](https://nvie.com/posts/a-successful-git-branching-model/) vu en cours. Pensez à bien pousser toutes les branches locales vers votre dépôt. Le dépôt GitHub ou GitLab central doit contenir toutes les branches.
+
+### Visualisation avec gource (optionnel)
 
 Pour [installer `gource`](https://gource.io/) sous GNU/Linux (Ubuntu/Debian), utiliser la commande suivante :
 
@@ -344,11 +381,9 @@ Pour les utilisateur·ices de Windows, installer [WSL2](https://learn.microsoft.
 
 ## Liens utiles
 
+ - [A successful Git branching model](https://nvie.com/posts/a-successful-git-branching-model/), l'article original décrivant en détail le workflow *GitFlow*
  - [How to capture Control+D signal?](https://stackoverflow.com/questions/1516122/how-to-capture-controld-signal), discussion sur l'interception du signal `End Of File`;
  - [My Gource video production pipeline](https://dev.to/voieducode/my-gource-video-production-pipeline-5eb0), décrit un exemple d'utilisation de gource;
  - [Philosophie d'Unix](https://fr.wikipedia.org/wiki/Philosophie_d%27Unix), description de la philosophie Unix;
  - [Pipeline (Unix)](https://en.wikipedia.org/wiki/Pipeline_(Unix)), description du pipe;
  - [Pipe: How the System Call That Ties Unix Together Came About](https://thenewstack.io/pipe-how-the-system-call-that-ties-unix-together-came-about/), présente l'histoire de la création du pipe.
-
-
-> Ce sujet est un fork [du dépôt de mon collègue Fabien Rozar](https://github.com/frozar/git-evaluation)
