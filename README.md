@@ -68,11 +68,11 @@ Dans l'e-mail, indiquer :
 
 > Merci de vérifier que le dépôt est **public** !
 
-> Vous êtes encouragé·e à mettre vos collègues en copie du mail de rendu.
+> Vous êtes encouragé·e à mettre votre collègue en copie du mail de rendu.
 
 ## Échéance
 
-Vous devez rendre le projet avant le **11/06/24 23h59 UTC+2**.
+Vous devez rendre votre travail avant le **12/06/24 23h59 UTC+2**.
 
 ## Bien démarrer
 
@@ -82,7 +82,7 @@ Le sujet du projet est [accessible sur ce dépôt](https://github.com/paul-schuh
 - Un dossier `test` comprenant des données pour tester votre programme;
 - Un fichier `good-expression.txt` comprenant des expressions à évaluer.
 
-> Cloner ce dépôt pour vous en servir comme point de départ.
+> Conseil : Cloner [ce dépôt](https://github.com/paul-schuhm/git-projet-minitrice) pour vous en servir comme point de départ.
 
 ## À rendre
 
