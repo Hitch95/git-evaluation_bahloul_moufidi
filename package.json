@@ -1,8 +1,8 @@
 {
-  "name": "git-evaluation_bahloul_moufidi",
+  "name": "projet",
   "version": "1.0.0",
-  "description": "<hr>",
-  "main": "minitrice.js",
+  "description": "## Description",
+  "main": "index.js",
   "directories": {
     "test": "test"
   },
