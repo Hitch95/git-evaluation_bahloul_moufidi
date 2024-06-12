@@ -1,0 +1,23 @@
+{
+  "name": "git-evaluation_bahloul_moufidi",
+  "version": "1.0.0",
+  "description": "<hr>",
+  "main": "minitrice.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/paul-schuhm/git-projet-minitrice.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/paul-schuhm/git-projet-minitrice/issues"
+  },
+  "homepage": "https://github.com/paul-schuhm/git-projet-minitrice#readme"
+}
