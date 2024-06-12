@@ -1,6 +1,8 @@
 #!/usr/bin/env node
 
 const readline = require('readline');
+const fs = require('fs');
+const path = require('path');
 
 let hasError = false;
 
@@ -91,5 +93,48 @@ function main() {
         });
     }
 }
+// Fonction pour traiter les fichiers de calcul
+function processFiles() {
+    const testDir = path.join(__dirname, '../test');
+    const resultsDir = path.join(__dirname, '../results');
+
+    if (!fs.existsSync(resultsDir)) {
+        fs.mkdirSync(resultsDir);
+    }
+
+    fs.readdir(testDir, (err, files) => {
+        if (err) {
+            console.error('Erreur de lecture du dossier test:', err);
+            process.exit(1);
+        }
+
+        files.forEach(file => {
+            if (path.extname(file) === '.txt') {
+                const filePath = path.join(testDir, file);
+                const resultFilePath = path.join(resultsDir, path.basename(file, '.txt') + '-result.txt');
+
+                fs.readFile(filePath, 'utf8', (err, data) => {
+                    if (err) {
+                        console.error(`Erreur de lecture du fichier ${file}:`, err);
+                        return;
+                    }
+
+                    const lines = data.split('\n').map(line => line.trim()).filter(line => line.length > 0);
+                    const results = lines.map(line => calculate(line));
+
+                    fs.writeFile(resultFilePath, results.join('\n'), 'utf8', err => {
+                        if (err) {
+                            console.error(`Erreur d'écriture du fichier ${resultFilePath}:`, err);
+                        } else {
+                            console.log(`Résultats écrits dans ${resultFilePath}`);
+                        }
+                    });
+                });
+            }
+        });
+    });
+}
 
 main();
+// Démarrage du traitement des fichiers
+processFiles();
